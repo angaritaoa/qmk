@@ -1,2 +1,4 @@
-# qmk
+#+title: QMK
+#+startup: nofold
+
 Quantum Mechanical Keyboard Firmware
