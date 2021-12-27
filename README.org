@@ -2,3 +2,33 @@
 #+startup: nofold
 
 Quantum Mechanical Keyboard Firmware
+
+* Configurando el entorno QMK
+
+** Preparar el entorno de construcción
+
+*** Requisitos previos
+
+Necesitarás instalar Git y Python. Instalarlos con el siguiente comando:
+
+#+begin_src bash
+sudo dnf -y install git python3-pip
+#+end_src
+
+*** Instalacón
+
+Instale QMK CLI ejecutando:
+
+#+begin_src bash
+python3 -m pip install --user qmk
+#+end_src
+
+*** Ejecutar QMK Setup
+
+Después de instalar QMK se debe configurar con el siguiente comando:
+
+#+begin_src bash
+qmk setup -H ~/software/qmk
+#+end_src
+
+En la mayoría de las situaciones, querrá responder =y= a todas las preguntas.
