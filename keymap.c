@@ -101,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_ADJUST] = LAYOUT_planck_grid(
   //,-----------------------------------------------------------------------------------------------------------------------.
-       XXXXXXX,  XXXXXXX,    CLOSE, CAPSLOCK,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,    SAVEG,    SAVES,   KC_TIL,  XXXXXXX,
+       XXXXXXX,  XXXXXXX,    CLOSE, CAPSLOCK,    KC_F8,  XXXXXXX,  XXXXXXX,  XXXXXXX,    SAVEG,    SAVES,   KC_TIL,  XXXXXXX,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
        XXXXXXX,    KC_F1,    KC_F2,    KC_F3,    KC_F5,  XXXXXXX,  XXXXXXX,      CUT,     COPY,    PASTE,     UNDO,    AGAIN,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
