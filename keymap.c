@@ -68,11 +68,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_LOWER] = LAYOUT_planck_grid(
   //,-----------------------------------------------------------------------------------------------------------------------.
-       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,   KC_INS,  KC_HOME,    KC_UP,   KC_END,  KC_PGUP,     KC_P,
+       XXXXXXX,  XXXXXXX,  XXXXXXX,   KC_APP,  XXXXXXX,  XXXXXXX,   KC_INS,  KC_HOME,    KC_UP,   KC_END,  KC_PGUP,   KC_TAB,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-       XXXXXXX,  KC_LCTL,  KC_LSFT,  KC_LALT,  KC_PSCR,   KC_APP,   KC_DEL,  KC_LEFT,  KC_DOWN, KC_RIGHT,  KC_PGDN,  KC_LGUI,
+       XXXXXXX,  KC_LCTL,  KC_LGUI,  KC_LSFT,  KC_LALT,  XXXXXXX,   KC_DEL,  KC_LEFT,  KC_DOWN, KC_RIGHT,  KC_PGDN,  KC_PSCR,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,   KC_TAB,  XXXXXXX,  XXXXXXX,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_VOLD,  KC_VOLU,
+       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_VOLD,  KC_VOLU,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
        XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,   KC_ENT,   KC_SPC,   ADJUST,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
   //`-----------------------------------------------------------------------------------------------------------------------'
@@ -101,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_ADJUST] = LAYOUT_planck_grid(
   //,-----------------------------------------------------------------------------------------------------------------------.
-       XXXXXXX,  XXXXXXX,    CLOSE, CAPSLOCK,    KC_F8,  XXXXXXX,  XXXXXXX,  XXXXXXX,    SAVEG,    SAVES,   KC_TIL,  XXXXXXX,
+         CLOSE,  XXXXXXX,  XXXXXXX, CAPSLOCK,    KC_F8,  XXXXXXX,  XXXXXXX,  XXXXXXX,    SAVEG,    SAVES,   KC_TIL,  XXXXXXX,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
        XXXXXXX,    KC_F1,    KC_F2,    KC_F3,    KC_F5,  XXXXXXX,  XXXXXXX,      CUT,     COPY,    PASTE,     UNDO,    AGAIN,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
