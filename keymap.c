@@ -68,11 +68,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [_LOWER] = LAYOUT_planck_grid(
   //,-----------------------------------------------------------------------------------------------------------------------.
-       XXXXXXX,  XXXXXXX,  XXXXXXX,   KC_APP,  XXXXXXX,  XXXXXXX,   KC_INS,  KC_HOME,    KC_UP,   KC_END,  KC_PGUP,   KC_TAB,
+       XXXXXXX,  XXXXXXX,  XXXXXXX,   KC_APP,  XXXXXXX,  XXXXXXX,   KC_DEL,  KC_HOME,    KC_UP,   KC_END,  KC_PGUP,     KC_W,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-       XXXXXXX,  KC_LCTL,  KC_LGUI,  KC_LSFT,  KC_LALT,  XXXXXXX,   KC_DEL,  KC_LEFT,  KC_DOWN, KC_RIGHT,  KC_PGDN,  KC_PSCR,
+       XXXXXXX,  KC_LCTL,  KC_LGUI,  KC_LSFT,  KC_LALT,  XXXXXXX,   KC_INS,  KC_LEFT,  KC_DOWN, KC_RIGHT,  KC_PGDN,  KC_PSCR,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_VOLD,  KC_VOLU,
+       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,     KC_V,  XXXXXXX,   KC_TAB,  KC_MPRV,  KC_MPLY,  KC_MNXT,  KC_VOLD,  KC_VOLU,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
        XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  _______,   KC_ENT,   KC_SPC,   ADJUST,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
   //`-----------------------------------------------------------------------------------------------------------------------'
@@ -92,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------------------------------------------------------------------------.
        XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,     KC_7,     KC_8,     KC_9,  XXXXXXX,  KC_BSPC,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,     KC_4,     KC_5,     KC_6,     KC_0,  XXXXXXX,
+       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_COMM,     KC_4,     KC_5,     KC_6,     KC_0,   KC_DOT,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
        XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,     KC_1,     KC_2,     KC_3,  XXXXXXX,  XXXXXXX,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
