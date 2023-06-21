@@ -30,3 +30,6 @@
 
 /* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
 //#define MIDI_TONE_KEYCODE_OCTAVES 2
+
+//#define USB_POLLING_INTERVAL_MS 1
+//#define QMK_KEYS_PER_SCAN 12
