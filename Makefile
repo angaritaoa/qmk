@@ -16,7 +16,8 @@ compile:
 	cp -f keymap.c ./qmk_firmware/keyboards/planck/keymaps/angaritaoa
 	cp -f rules.mk ./qmk_firmware/keyboards/planck/keymaps/angaritaoa
 	qmk clean --all
-	qmk compile --keymap angaritaoa --keyboard planck/rev6_drop
+#	qmk compile --keymap angaritaoa --keyboard planck/rev6_drop
+	qmk compile --keymap angaritaoa --keyboard planck/rev7
 
 .PHONY: flash
 flash:
