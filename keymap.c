@@ -8,11 +8,13 @@
 #define _RAISE   4 // RAISE layer
 #define _NUMPAD  5 // NUMPAD layer
 #define _ADJUST  6 // ADJUST layer (LOWER + RAISE)
+#define _TILL    7 // á, é
+#define _TILR    8 // í, ó, ú
 
 // Macro shortcuts.
 #define LOWER  MO(_LOWER)
 #define RAISE  MO(_RAISE)
-#define NUMPAD LT(_NUMPAD, KC_ESC)
+#define NUMPAD LT(_NUMPAD, KC_F)
 #define ADJUST MO(_ADJUST)
 #define KC_TIL LALT(KC_E)
 #define CUT LGUI(KC_X)
@@ -26,6 +28,16 @@
 #define CLOSE LCTL(KC_W)
 #define CAPSLOCK KC_CAPS_LOCK
 #define MOOM LCTL(LCMD(KC_M))
+#define ALGRA ALGR(KC_A)
+#define ALGRE ALGR(KC_E)
+#define ALGRI ALGR(KC_I)
+#define ALGRO ALGR(KC_O)
+#define ALGRU ALGR(KC_U)
+#define ALGRN ALGR(KC_N)
+#define LSFT_ESC LSFT_T(KC_ESC)
+#define RSFT_QUO RSFT_T(KC_QUOT)
+#define TILL LT(_TILL, KC_K)
+#define TILR LT(_TILR, KC_D)
 
 enum planck_keycodes {
     QWERTY = SAFE_RANGE,
@@ -33,16 +45,19 @@ enum planck_keycodes {
     DVORAK
 };
 
+
+       //KC_LSFT,     KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,  KC_RSFT,
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QWERTY] = LAYOUT_planck_grid(
   //,-----------------------------------------------------------------------------------------------------------------------.
         KC_TAB,     KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,  KC_BSPC,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-        NUMPAD,     KC_A,     KC_S,     KC_D,     KC_F,     KC_G,     KC_H,     KC_J,     KC_K,     KC_L,  KC_SCLN,  KC_QUOT,
+      LSFT_ESC,     KC_A,     KC_S,     TILR,   NUMPAD,     KC_G,     KC_H,     KC_J,     TILL,     KC_L,  KC_SCLN, RSFT_QUO,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-       KC_LSFT,     KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,  KC_RSFT,
+       KC_LCTL,     KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,     KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,  KC_RCTL,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
-       KC_LCTL,  KC_LCTL,  KC_LCMD,  KC_LALT,    LOWER,   KC_ENT,   KC_SPC,    RAISE,  OS_RALT,  KC_DOWN,    KC_UP, KC_RIGHT
+       KC_LCTL,  KC_LCTL,  KC_LCMD,  KC_LALT,    LOWER,   KC_ENT,   KC_SPC,    RAISE,  KC_LEFT,  KC_DOWN,    KC_UP, KC_RIGHT
   //`-----------------------------------------------------------------------------------------------------------------------'
   ),
   [_COLEMAK] = LAYOUT_planck_grid(
@@ -109,6 +124,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,   KC_F10,  XXXXXXX,  XXXXXXX,     FIND,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
   //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
        XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,   QWERTY,  COLEMAK,   DVORAK,    RESET
+  //`-----------------------------------------------------------------------------------------------------------------------'
+  ),
+  [_TILL] = LAYOUT_planck_grid(
+  //,-----------------------------------------------------------------------------------------------------------------------.
+       XXXXXXX,  XXXXXXX,  XXXXXXX,    ALGRE,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+  //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+       XXXXXXX,    ALGRA,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_LSFT,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+  //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+  //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
+  //`-----------------------------------------------------------------------------------------------------------------------'
+  ),
+  [_TILR] = LAYOUT_planck_grid(
+  //,-----------------------------------------------------------------------------------------------------------------------.
+       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,    ALGRU,    ALGRI,    ALGRO,  XXXXXXX,  XXXXXXX,
+  //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_RSFT,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+  //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,    ALGRN,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,
+  //|---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------|
+       XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX
   //`-----------------------------------------------------------------------------------------------------------------------'
   )
 };
